@@ -4,7 +4,7 @@ import {Link} from 'react-router'
 class NavFooter extends React.Component {
   render () {
     return (
-      <div className='nav-footer'>red
+      <div className='nav-footer'>
         <Link to='/' activeStyle={{color:'red'}} onlyActiveOnIndex={true}>
           <span className="glyphicon glyphicon-home" aria-hidden="true"></span><br />Home</Link>
         <Link to='blog' activeStyle={{color:'red'}}>
