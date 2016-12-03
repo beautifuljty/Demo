@@ -153,5 +153,7 @@
 .blog-content button{
   padding: 5px 8px;
   border-radius: 5px;
-
+}
+.item-wrap{
+  flex-grow: 1;
 }
