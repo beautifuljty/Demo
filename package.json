@@ -4,7 +4,7 @@
   "description": "A new Webpack boilerplate with hot reloading React components, and error handling on module and component level.",
   "scripts": {
     "clean": "rimraf dist",
-    "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js -w",
     "build": "npm run clean && npm run build:webpack",
     "start": "node devServer.js",
     "lint": "eslint src"
@@ -55,8 +55,12 @@
     "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
+    "axios": "^0.15.3",
+    "echarts": "^3.3.2",
+    "material-ui": "^0.16.4",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
-    "react-router": "^3.0.0"
+    "react-router": "^3.0.0",
+    "react-tap-event-plugin": "^2.0.1"
   }
 }

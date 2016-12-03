@@ -2,10 +2,18 @@ import React, { PropTypes } from 'react'
 
 class Home extends React.Component {
   render () {
+    console.log(this.props);
     return (
-      <div>
-        Home
-        {this.props.children}
+      <div className='home-wrap'>
+        <div className='home-cover'>
+          <div className='home-item'>
+            <h3>HI,I'M BEAUTIFUL</h3>
+            <p>You are beautiful like diamonds in the sky.</p>
+            <button type="button" className="btn btn-danger">
+              <a href='https://www.baidu.com/' style={{color:'#fff'}}>BEAUTIFUL</a>
+            </button>
+          </div>
+        </div>
       </div>
     )
   }
