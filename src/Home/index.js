@@ -10,7 +10,7 @@ class Home extends React.Component {
             <h3>HI,I'M BEAUTIFUL</h3>
             <p>You are beautiful like diamonds in the sky.</p>
             <button type="button" className="btn btn-danger">
-              <a href='https://www.baidu.com/' style={{color:'#fff'}}>BEAUTIFUL</a>
+              <a href='https://github.com/beautifuljty' style={{color:'#fff'}}>BEAUTIFUL</a>
             </button>
           </div>
         </div>

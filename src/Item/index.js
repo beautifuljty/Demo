@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react';
 var marked = require('marked');
 import axios from 'axios';
-import Loading from '../component/Loading'
+import Loading from '../component/Loading';
+import hljs from 'highlight.js';
 
 class Item extends React.Component {
   constructor(){
@@ -16,6 +17,12 @@ class Item extends React.Component {
     .then( res => this.setState({data:res.data}) )
   }
   render () {
+    marked.setOptions({
+      highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+
     let content = this.state.data.length == 0 ? 'Please Waiting~' : marked(this.state.data);
     // let content =
     //   this.props.params.title == '0' ? 'Page One' :
@@ -24,7 +31,7 @@ class Item extends React.Component {
     return (
       <div className='item-wrap'>
         {this.state.data.length == 0 ? <Loading /> :
-        <div dangerouslySetInnerHTML={{__html:content}}></div> }
+        <div className='post-wrap' dangerouslySetInnerHTML={{__html:content}}></div> }
       </div>
     )
   }
