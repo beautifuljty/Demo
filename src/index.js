@@ -5,7 +5,7 @@ import Routers from './routes.js';
 import './main.css';
 import './post.css';
 
-// import 'highlight.js/styles/'
+import 'highlight.js/styles/dark.css'
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();

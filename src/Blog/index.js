@@ -18,8 +18,9 @@ class Blog extends React.Component {
     }
   }
   componentDidMount(){
-    axios.get('https://raw.githubusercontent.com/beautifuljty/Demo/master/data/blogcard.json')
+    axios.get('https://raw.githubusercontent.com/beautifuljty/Demo/master/data/blogcard.json ')
     .then( res => this.setState({data:res.data,wait:false}) )
+    .catch( err => alert(err) )
   }
   render () {
     // let cards = data.map( (item,i) => <BlogCard {...item} key={i} /> )
